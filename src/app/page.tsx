@@ -1,10 +1,8 @@
 "use client"
 
-import dynamic from 'next/dynamic'
+import Spline from '@splinetool/react-spline'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
-
-const Spline = dynamic(() => import('@splinetool/react-spline/next').then(m => m.default), { ssr: false })
 
 export default function HomePage() {
   return (
