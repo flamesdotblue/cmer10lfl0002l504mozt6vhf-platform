@@ -9,56 +9,56 @@ export default function HomePage() {
     <main className="relative min-h-screen overflow-hidden">
       <div className="pointer-events-none absolute inset-0 bg-radial-grid" aria-hidden />
 
-      <Navbar />
+      <section className="relative min-h-screen bg-white text-base-900 overflow-hidden">
+        {/* Spline background covering entire hero */}
+        <div className="absolute inset-0 -z-10">
+          <Spline className="h-full w-full" scene="https://prod.spline.design/Od18UjFJmAz2ZSfC/scene.splinecode" />
+        </div>
 
-      <section className="relative">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 pb-24 pt-28 md:grid-cols-2 lg:gap-14 lg:px-10 lg:pt-32">
-          <div className="relative z-10 fade-in">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-primary-500" />
-              Private beta is live
-            </div>
-            <h1 className="mt-6 text-4xl font-semibold leading-tight md:text-6xl">
-              Build with
-              <span className="holo-text"> holographic intelligence</span>
-            </h1>
-            <p className="mt-5 max-w-xl text-balance text-white/70 md:text-lg">
-              Lumina AI fuses metallic precision with glossy creativity. Prototype, deploy, and scale AI-native products with a canvas built for the future.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link
-                href="#get-access"
-                className="relative shine rounded-xl bg-gradient-to-r from-primary-600 via-accent-600 to-primary-700 px-6 py-3 text-sm font-medium text-white shadow-lg transition-transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary-600/50"
-              >
-                Get early access
-              </Link>
-              <Link
-                href="#learn-more"
-                className="glass rounded-xl px-6 py-3 text-sm font-medium text-white/90 transition hover:text-white"
-              >
-                Learn more
-              </Link>
-            </div>
-            <div className="mt-10 flex items-center gap-6 text-xs text-white/50">
-              <div className="flex -space-x-2">
-                <span className="h-7 w-7 rounded-full border border-white/10 bg-gradient-to-br from-white/10 to-white/0" />
-                <span className="h-7 w-7 rounded-full border border-white/10 bg-gradient-to-br from-white/10 to-white/0" />
-                <span className="h-7 w-7 rounded-full border border-white/10 bg-gradient-to-br from-white/10 to-white/0" />
+        {/* Light navbar over white hero */}
+        <Navbar variant="light" />
+
+        {/* Hero content */}
+        <div className="relative">
+          <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 pb-24 pt-28 md:grid-cols-2 lg:gap-14 lg:px-10 lg:pt-32">
+            <div className="relative z-10 fade-in">
+              <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-black/[0.04] px-3 py-1 text-xs text-black/60">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-primary-500" />
+                Private beta is live
               </div>
-              <span>Trusted by forward-thinking teams</span>
+              <h1 className="mt-6 text-4xl font-semibold leading-tight md:text-6xl">
+                Build with
+                <span className="bg-gradient-to-r from-primary-600 via-accent-600 to-primary-700 bg-clip-text text-transparent"> holographic intelligence</span>
+              </h1>
+              <p className="mt-5 max-w-xl text-balance text-black/70 md:text-lg">
+                Lumina AI fuses metallic precision with glossy creativity. Prototype, deploy, and scale AI-native products with a canvas built for the future.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <Link
+                  href="#get-access"
+                  className="relative rounded-xl bg-gradient-to-r from-primary-600 via-accent-600 to-primary-700 px-6 py-3 text-sm font-medium text-white shadow-lg transition-transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary-600/30"
+                >
+                  Get early access
+                </Link>
+                <Link
+                  href="#learn-more"
+                  className="rounded-xl border border-black/10 bg-white/80 px-6 py-3 text-sm font-medium text-black/80 backdrop-blur transition hover:text-black hover:bg-white"
+                >
+                  Learn more
+                </Link>
+              </div>
+              <div className="mt-10 flex items-center gap-6 text-xs text-black/50">
+                <div className="flex -space-x-2">
+                  <span className="h-7 w-7 rounded-full border border-black/10 bg-gradient-to-br from-black/[0.06] to-transparent" />
+                  <span className="h-7 w-7 rounded-full border border-black/10 bg-gradient-to-br from-black/[0.06] to-transparent" />
+                  <span className="h-7 w-7 rounded-full border border-black/10 bg-gradient-to-br from-black/[0.06] to-transparent" />
+                </div>
+                <span>Trusted by forward-thinking teams</span>
+              </div>
             </div>
-          </div>
 
-          <div className="relative h-[420px] w-full md:h-[560px]">
-            <div className="absolute -inset-x-10 -inset-y-10 blur-3xl" aria-hidden>
-              <div className="h-full w-full bg-gradient-to-tr from-primary-600/20 via-accent-600/20 to-transparent" />
-            </div>
-            <div className="glass relative z-0 h-full w-full overflow-hidden rounded-3xl">
-              <Spline
-                className="h-full w-full"
-                scene="https://prod.spline.design/Od18UjFJmAz2ZSfC/scene.splinecode"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-base-900/30 via-transparent to-transparent" />
+            <div className="relative h-[420px] w-full md:h-[560px]">
+              {/* Spacer for layout symmetry; model is full-bleed in background */}
             </div>
           </div>
         </div>
