@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 
-const Spline = dynamic(() => import('@splinetool/react-spline'), { ssr: false })
+const Spline = dynamic(() => import('@splinetool/react-spline/next').then(m => m.default), { ssr: false })
 
 export default function HomePage() {
   return (
