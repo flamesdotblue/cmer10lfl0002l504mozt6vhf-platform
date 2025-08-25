@@ -1,64 +1,58 @@
 "use client"
 
-import Spline from '@splinetool/react-spline/next'
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
+
+const Spline = dynamic(() => import('@splinetool/react-spline'), { ssr: false })
 
 export default function HomePage() {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 bg-radial-grid" aria-hidden />
-
       <section className="relative min-h-screen bg-white text-base-900 overflow-hidden">
         {/* Spline background covering entire hero */}
-        <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 z-0">
           <Spline className="h-full w-full" scene="https://prod.spline.design/Od18UjFJmAz2ZSfC/scene.splinecode" />
         </div>
 
         {/* Light navbar over white hero */}
         <Navbar variant="light" />
 
-        {/* Hero content */}
-        <div className="relative">
-          <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 pb-24 pt-28 md:grid-cols-2 lg:gap-14 lg:px-10 lg:pt-32">
-            <div className="relative z-10 fade-in">
-              <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-black/[0.04] px-3 py-1 text-xs text-black/60">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-primary-500" />
-                Private beta is live
-              </div>
-              <h1 className="mt-6 text-4xl font-semibold leading-tight md:text-6xl">
-                Build with
-                <span className="bg-gradient-to-r from-primary-600 via-accent-600 to-primary-700 bg-clip-text text-transparent"> holographic intelligence</span>
-              </h1>
-              <p className="mt-5 max-w-xl text-balance text-black/70 md:text-lg">
-                Lumina AI fuses metallic precision with glossy creativity. Prototype, deploy, and scale AI-native products with a canvas built for the future.
-              </p>
-              <div className="mt-8 flex flex-wrap items-center gap-3">
-                <Link
-                  href="#get-access"
-                  className="relative rounded-xl bg-gradient-to-r from-primary-600 via-accent-600 to-primary-700 px-6 py-3 text-sm font-medium text-white shadow-lg transition-transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary-600/30"
-                >
-                  Get early access
-                </Link>
-                <Link
-                  href="#learn-more"
-                  className="rounded-xl border border-black/10 bg-white/80 px-6 py-3 text-sm font-medium text-black/80 backdrop-blur transition hover:text-black hover:bg-white"
-                >
-                  Learn more
-                </Link>
-              </div>
-              <div className="mt-10 flex items-center gap-6 text-xs text-black/50">
-                <div className="flex -space-x-2">
-                  <span className="h-7 w-7 rounded-full border border-black/10 bg-gradient-to-br from-black/[0.06] to-transparent" />
-                  <span className="h-7 w-7 rounded-full border border-black/10 bg-gradient-to-br from-black/[0.06] to-transparent" />
-                  <span className="h-7 w-7 rounded-full border border-black/10 bg-gradient-to-br from-black/[0.06] to-transparent" />
-                </div>
-                <span>Trusted by forward-thinking teams</span>
-              </div>
+        {/* Centered hero content */}
+        <div className="relative z-10 mx-auto min-h-screen max-w-5xl px-6 lg:px-10 flex items-center justify-center text-center">
+          <div className="w-full">
+            <div className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-black/[0.04] px-3 py-1 text-xs text-black/60">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-primary-500" />
+              Private beta is live
             </div>
-
-            <div className="relative h-[420px] w-full md:h-[560px]">
-              {/* Spacer for layout symmetry; model is full-bleed in background */}
+            <h1 className="mt-6 text-4xl font-semibold leading-tight md:text-6xl">
+              Build with
+              <span className="bg-gradient-to-r from-primary-600 via-accent-600 to-primary-700 bg-clip-text text-transparent"> holographic intelligence</span>
+            </h1>
+            <p className="mt-5 mx-auto max-w-2xl text-balance text-black/70 md:text-lg">
+              Lumina AI fuses metallic precision with glossy creativity. Prototype, deploy, and scale AI-native products with a canvas built for the future.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <Link
+                href="#get-access"
+                className="relative rounded-xl bg-gradient-to-r from-primary-600 via-accent-600 to-primary-700 px-6 py-3 text-sm font-medium text-white shadow-lg transition-transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary-600/30"
+              >
+                Get early access
+              </Link>
+              <Link
+                href="#learn-more"
+                className="rounded-xl border border-black/10 bg-white/80 px-6 py-3 text-sm font-medium text-black/80 backdrop-blur transition hover:text-black hover:bg-white"
+              >
+                Learn more
+              </Link>
+            </div>
+            <div className="mt-10 flex items-center justify-center gap-6 text-xs text-black/50">
+              <div className="flex -space-x-2">
+                <span className="h-7 w-7 rounded-full border border-black/10 bg-gradient-to-br from-black/[0.06] to-transparent" />
+                <span className="h-7 w-7 rounded-full border border-black/10 bg-gradient-to-br from-black/[0.06] to-transparent" />
+                <span className="h-7 w-7 rounded-full border border-black/10 bg-gradient-to-br from-black/[0.06] to-transparent" />
+              </div>
+              <span>Trusted by forward-thinking teams</span>
             </div>
           </div>
         </div>
