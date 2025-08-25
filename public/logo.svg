@@ -1,0 +1,19 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#67d2ff"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#67d2ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#0f1117"/>
+  <g filter="url(#f1)">
+    <path d="M128 320c0-106 86-192 192-192 14 0 28 1 41 4-45 10-83 39-106 78-15 26-23 56-23 87 0 18 3 36 8 52-12 5-26 8-40 8-40 0-72-32-72-72z" fill="url(#g1)"/>
+    <path d="M224 384c106 0 192-86 192-192 0-20-3-39-9-57 13 16 24 35 31 55 34 95-16 200-112 234-90 32-188-13-226-100 33 38 82 60 124 60z" fill="url(#g1)" opacity=".5"/>
+  </g>
+  <defs>
+    <filter id="f1" x="0" y="0" width="512" height="512" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+    </filter>
+  </defs>
+</svg>
